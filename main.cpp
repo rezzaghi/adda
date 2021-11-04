@@ -188,7 +188,7 @@ Module *FuncExprAST::createModAdd(llvm::LLVMContext &context){
   llvm::Value *y = FuncExprAST::rightVal();
   llvm::BasicBlock *bb = llvm::BasicBlock::Create(context, "entry", func);
   llvm::IRBuilder<>builder(bb);
-  llvm::Value *tmp = builder.CreateBinOp(llvm::Instruction::Add, x, y, "tmp");
+  llvm::Value *tmp = builder.CreateBinOp(llvm::Instruction::FAdd, x, y, "tmp");
   builder.CreateRet(tmp);
 
   return TheModule;
