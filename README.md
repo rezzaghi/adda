@@ -5,7 +5,6 @@ Single file hardcoded compiler to llvm IR, built for the dumbest language with t
 ```
 add 1 1
 add 3 5
-add 40 20
 ```
 ## Output
 ```
@@ -14,7 +13,7 @@ source_filename = "my cool jit"
 
 define double @main() {
 entry:
-  ret double add (double 1.000000e+00, double 1.000000e+00)
+  ret double 2.000000e+00
 }
 
 ; ModuleID = 'my cool jit'
@@ -22,9 +21,8 @@ source_filename = "my cool jit"
 
 define double @main() {
 entry:
-  ret double add (double 3.000000e+00, double 5.000000e+00)
+  ret double 8.000000e+00
 }
-
 
 ```
 
